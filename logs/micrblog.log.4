@@ -1,0 +1,107 @@
+2018-09-21 22:07:43,890 INFO: Microblog startup [in C:\Users\SihamNito\dev\courses\microblog\app\__init__.py:43]
+2018-09-21 22:07:49,141 INFO: Microblog startup [in C:\Users\SihamNito\dev\courses\microblog\app\__init__.py:43]
+2018-09-21 22:15:44,639 INFO: Microblog startup [in C:\Users\SihamNito\dev\courses\microblog\app\__init__.py:43]
+2018-09-21 22:16:13,996 INFO: Microblog startup [in C:\Users\SihamNito\dev\courses\microblog\app\__init__.py:43]
+2018-09-21 22:16:36,560 INFO: Microblog startup [in C:\Users\SihamNito\dev\courses\microblog\app\__init__.py:43]
+2018-09-21 22:21:18,108 INFO: Microblog startup [in C:\Users\SihamNito\dev\courses\microblog\app\__init__.py:43]
+2018-09-22 10:22:17,344 INFO: Microblog startup [in C:\Users\SihamNito\dev\courses\microblog\app\__init__.py:43]
+2018-09-22 10:29:13,602 ERROR: Exception on /login [POST] [in c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\SihamNito\dev\courses\microblog\app\routes.py", line 46, in login
+    if posts.has_prev else None
+  File "C:\Users\SihamNito\dev\courses\microblog\app\models.py", line 59, in check_password
+    return check_password_hash(self.password_hash, password)
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\werkzeug\security.py", line 245, in check_password_hash
+    if pwhash.count('$') < 2:
+AttributeError: 'NoneType' object has no attribute 'count'
+2018-09-22 10:30:26,744 INFO: Microblog startup [in C:\Users\SihamNito\dev\courses\microblog\app\__init__.py:43]
+2018-09-22 10:30:31,760 ERROR: Exception on /explore [GET] [in c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\SihamNito\dev\courses\microblog\app\routes.py", line 48, in explore
+    next_url=next_url, prev_url=prev_url)
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\flask\templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\jinja2\loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\jinja2\environment.py", line 591, in compile
+    self.handle_exception(exc_info, source_hint=source_hint)
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\SihamNito\dev\courses\microblog\app\templates\index.html", line 20, in template
+    {% endfor %}
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\jinja2\environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\jinja2\parser.py", line 901, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\jinja2\parser.py", line 883, in subparse
+    rv = self.parse_statement()
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\jinja2\parser.py", line 130, in parse_statement
+    return getattr(self, 'parse_' + self.stream.current.value)()
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\jinja2\parser.py", line 268, in parse_block
+    node.body = self.parse_statements(('name:endblock',), drop_needle=True)
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\jinja2\parser.py", line 165, in parse_statements
+    result = self.subparse(end_tokens)
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\jinja2\parser.py", line 883, in subparse
+    rv = self.parse_statement()
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\jinja2\parser.py", line 144, in parse_statement
+    self.fail_unknown_tag(token.value, token.lineno)
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\jinja2\parser.py", line 97, in fail_unknown_tag
+    return self._fail_ut_eof(name, self._end_token_stack, lineno)
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\jinja2\parser.py", line 90, in _fail_ut_eof
+    self.fail(' '.join(message), lineno)
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\jinja2\parser.py", line 59, in fail
+    raise exc(msg, lineno, self.name, self.filename)
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endfor'. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
+2018-09-22 10:30:33,616 ERROR: Exception on /index [GET] [in c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\sihamnito\dev\courses\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\SihamNito\dev\courses\microblog\app\routes.py", line 29, in index
+    posts = current_user.followed_posts().paginate(page, app.cofig['POSTS_PER_PAGE'], False)
+AttributeError: 'Flask' object has no attribute 'cofig'
